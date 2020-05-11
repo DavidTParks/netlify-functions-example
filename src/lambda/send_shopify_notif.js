@@ -9,6 +9,8 @@ const {
 } = process.env;
 
 
+const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+
 exports.handler = function(event, context, callback) {
   Promise.all(
     // split the string of several messages into single numbers
